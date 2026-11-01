@@ -1,0 +1,15 @@
+Componente: Fotos (Photos)
+===========================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section class="fotos">
+- CSS: css/styles.css -> buscar ".fotos"
+
+Que hace:
+- Es una cuadricula de 9 fotos de prensa.
+- Se ven un poco en grises y al pasar el mouse agarran
+  su color real y se acercan un poquito.
+- Abajo de cada foto va el credito de quien la tomo.
+
+Pendiente:
+- El credito de las 5 fotos nuevas (las ultimas de la lista).

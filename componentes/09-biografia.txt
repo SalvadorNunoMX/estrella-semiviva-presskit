@@ -1,0 +1,16 @@
+Componente: Biografia (Sobre mi)
+=================================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="sobre-mi" class="biografia">
+- CSS: css/styles.css -> buscar ".biografia" y ".marco-rojo"
+
+Que hace:
+- Presenta el proyecto: los generos (Darkwave, Witchouse,
+  Coldwave y Post-Punk), el nombre y dos parrafos de texto.
+- A un lado va la foto del panteon con un marco decorado
+  con esquinas.
+
+Detalles:
+- En pantallas grandes la foto y el texto van lado a lado;
+  en celular se acomodan uno abajo del otro.

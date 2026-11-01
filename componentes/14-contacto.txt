@@ -1,0 +1,22 @@
+Componente: Contacto y caja de copiado
+=======================================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="contacto" class="contacto">
+- CSS: css/styles.css -> buscar ".contacto", ".texto-send" y ".caja-enviar"
+
+Que hace:
+- Formulario con 3 campos: Name, Email y Message.
+- Al pulsar Send se abre una caja con el mismo diseno que
+  explica como copiar el correo y el mensaje escritos, y da
+  los canales para enviarlos: Instagram DM y correo.
+
+Importante:
+- La caja abre sin JavaScript: funciona con un checkbox
+  escondido y el selector ":checked" de CSS.
+- Como la pagina no usa JavaScript, no puede leer lo que la
+  persona escribe; por eso la caja guia el copiado en vez de
+  copiar sola.
+
+Pendiente:
+- El correo electronico de contacto.

@@ -1,0 +1,21 @@
+Componente: Efecto VHS de toda la pagina
+=========================================
+
+Donde esta en el codigo:
+- HTML: index.html -> el div con clase "vhs-overlay" (esta hasta arriba, apenas abre el <body>)
+- CSS: css/styles.css -> buscar ".vhs-overlay"
+
+Que hace:
+- Es una capa transparente que esta por encima de TODA la pagina.
+- Pone ruido de television estatica y unas lineas de glitch
+  que parpadean, como si fuera un videocasete.
+- No estorba los clics: todo lo de abajo sigue funcionando.
+
+Archivos que usa:
+- img/vhs-noise.png   (la estatica)
+- img/vhs-glitch.gif  (las lineas de glitch animadas)
+
+Nota:
+- La hice basandome en un tutorial de efecto Scotch/VHS.
+- Si la compu o el cel de la persona visitante tiene activada
+  la opcion de reducir movimiento, el glitch se apaga solo.

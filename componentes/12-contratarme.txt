@@ -1,0 +1,14 @@
+Componente: Contratarme
+========================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="contratarme" class="contratarme">
+- CSS: css/styles.css -> buscar ".contratarme"
+
+Que hace:
+- Son las condiciones para contratar, en 3 tarjetas:
+  * Condiciones de contratacion (info del lugar, horarios
+    y el anticipo del 60% para el transporte)
+  * Seguridad y cancelacion
+  * Compromisos de lx artista
+- Las tarjetas se iluminan de morado al pasar el mouse.

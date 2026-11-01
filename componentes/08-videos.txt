@@ -1,0 +1,17 @@
+Componente: Videos
+===================
+
+Donde esta en el codigo:
+- HTML: index.html -> dentro de la seccion discografia, el div con clase "videos-grid"
+- CSS: css/styles.css -> buscar ".videos-grid" y ".video"
+
+Que hace:
+- Muestra los videos con efecto VHS (lineas de escaneo y
+  barras de colores RGB parpadeando, hecho solo con CSS).
+- Cada video tiene controles para darle play.
+- Abajo el boton "View all videos" lleva al canal de YouTube.
+
+Archivos que usa:
+- video/snapgram.io_download-file-3l4o1lru.mp4
+- video/snapgram.io_download-file-0y50d4o6.mp4
+- img/poster-video-1.jpg y img/poster-video-2.jpg

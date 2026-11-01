@@ -1,0 +1,18 @@
+Componente: Trayectoria
+========================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="trayectoria" class="trayectoria">
+- CSS: css/styles.css -> buscar ".trayectoria"
+
+Que hace:
+- Cuenta lo que hace el proyecto en vivo, dividido en bloques:
+  * Estrella Semiviva - Fullband (integrantes y duracion del show)
+  * Estrella Semiviva - DJ (duracion de los sets)
+  * Trayectoria en vivo (los foros donde se han presentado)
+  * Han compartido escenario con (las bandas)
+  * Zona de contratacion (ciudad, aun PENDIENTE)
+
+Detalles:
+- De fondo tiene una foto en vivo oscurecida.
+- El titulo largo usa la fuente de texto normal para que se lea bien.

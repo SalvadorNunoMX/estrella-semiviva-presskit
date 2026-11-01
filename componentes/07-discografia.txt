@@ -1,0 +1,16 @@
+Componente: Discografia y lanzamientos
+=======================================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="discografia" class="discografia">
+- CSS: css/styles.css -> buscar ".release" y ".discografia__lista"
+
+Que hace:
+- Arriba esta el bloque destacado OUT NOW con la portada del
+  lanzamiento mas reciente y el boton "Stream now" que lleva a YouTube.
+- Abajo esta la lista completa de lanzamientos:
+  Oleo, Polifonia, Crystal Caves OST, Gotico slow, Redcrooss y Purple Curse.
+
+Pendiente:
+- El nombre del lanzamiento destacado y su portada real
+  (la imagen actual es provisional).

@@ -1,0 +1,15 @@
+Componente: Encabezado y menu
+==============================
+
+Donde esta en el codigo:
+- HTML: index.html -> <header class="site-header"> y <nav class="navigation">
+- CSS: css/styles.css -> buscar ".site-header", ".site-logo" y ".nav-item"
+
+Que hace:
+- Muestra el nombre ESTRELLA SEMIVIVA arriba y el menu con
+  todas las secciones: Musica, Sobre mi, Trayectoria, Calendario,
+  Discografia, Rider tecnico, Contratarme, Paquetes y Contacto.
+- Cada opcion del menu baja la pagina hasta su seccion.
+
+Detalles:
+- El nombre usa la fuente tribal (Anomale) que se carga desde fonts/.

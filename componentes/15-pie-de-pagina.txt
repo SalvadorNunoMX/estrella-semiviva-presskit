@@ -1,0 +1,16 @@
+Componente: Pie de pagina (footer)
+===================================
+
+Donde esta en el codigo:
+- HTML: index.html -> <footer class="site-footer">
+- CSS: css/styles.css -> buscar ".site-footer"
+
+Que hace:
+- Es el cierre de la pagina, con los enlaces directos a las
+  redes del proyecto: Spotify, YouTube, Instagram y Hyperfollow.
+- Cada enlace se ilumina cuando pasas el mouse.
+- Abajo va la linea ESTRELLA SEMIVIVA - Press Kit.
+
+Detalles:
+- En pantallas grandes los enlaces van en 4 columnas
+  y en celular en 2.

@@ -1,0 +1,16 @@
+Componente: Paquetes (precios)
+===============================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="paquetes" class="paquetes">
+- CSS: css/styles.css -> buscar ".paquetes" y ".paquete"
+
+Que hace:
+- Muestra los 5 paquetes de contratacion con precio:
+  Presentacion basica $500, Presentacion gratis $0,
+  DJ Set $600 (o $500 por 40 minutos), Live Campaign $700
+  y Ritual Performance $1500.
+- El Ritual Performance tiene un halo morado fijo porque
+  es el paquete premium. Los demas se iluminan al pasar el mouse.
+- Abajo va la nota de que las presentaciones duran 30-40 minutos
+  (menos el DJ set y el Ritual Performance).

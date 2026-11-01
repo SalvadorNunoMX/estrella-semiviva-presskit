@@ -1,0 +1,16 @@
+Componente: Portada (hero)
+===========================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section class="hero">
+- CSS: css/styles.css -> buscar ".hero", ".hero__video" y ".hero__card"
+
+Que hace:
+- Es lo primero que se ve al entrar: un video de presentacion
+  de fondo con efecto VHS y la tarjeta de Spotify Wrapped en medio.
+- El video se reproduce solo, en bucle y sin sonido.
+
+Archivos que usa:
+- video/snapgram.io_download-file-0y50d4o6.mp4  (video de fondo)
+- img/poster-video-2.jpg                        (imagen mientras carga)
+- img/snapgram.io_download-file-wiq6bgj9.jpg    (la tarjeta Wrapped)

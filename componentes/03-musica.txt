@@ -1,0 +1,16 @@
+Componente: Seccion Musica (Spotify)
+=====================================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="musica" class="musica">
+- CSS: css/styles.css -> buscar ".musica"
+
+Que hace:
+- Muestra el reproductor oficial de Spotify del proyecto,
+  con los ultimos lanzamientos.
+- Abajo hay un enlace para abrir el perfil completo en Spotify.
+
+Importante:
+- Esta es la UNICA parte de la pagina que necesita internet,
+  porque el reproductor viene de los servidores de Spotify.
+- Sin internet ese cuadro se ve vacio, no es un error.

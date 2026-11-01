@@ -1,0 +1,17 @@
+Componente: Rider tecnico
+==========================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="rider" class="rider">
+- CSS: css/styles.css -> buscar ".rider"
+
+Que hace:
+- Es la lista tecnica para los recintos, en 3 partes:
+  * Equipo propio del proyecto (sintetizadores, bajos, pedales, mezcla)
+  * Equipo obligatorio que debe poner el recinto (microfono, mesa,
+    bocinas y multicontacto) con la nota de que se puede rentar
+    lo que falte
+  * Equipo opcional (amplificador de bajo y cables)
+
+Detalles:
+- Las listas llevan una crucecita al inicio de cada punto.

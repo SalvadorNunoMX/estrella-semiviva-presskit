@@ -1,0 +1,14 @@
+Componente: Calendario
+=======================
+
+Donde esta en el codigo:
+- HTML: index.html -> <section id="calendario" class="calendario">
+- CSS: css/styles.css -> buscar ".calendario" y ".event_item"
+
+Que hace:
+- Es la lista de proximas fechas. Cada evento es una tarjeta
+  que se ilumina de morado cuando pasas el mouse encima.
+
+Pendiente:
+- Las 4 tarjetas estan vacias: falta la fecha, el evento,
+  la ciudad y el venue de cada una.

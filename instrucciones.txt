@@ -1,0 +1,32 @@
+COMO USAR ESTE PROYECTO
+========================
+
+Que es esto:
+- La pagina web (press kit) de ESTRELLA SEMIVIVA.
+- Esta hecha solo con HTML y CSS. No usa JavaScript ni frameworks.
+- Funciona sin internet. Lo unico que necesita internet es el
+  reproductor de Spotify de la seccion Musica.
+
+Como abrirla:
+- Haz doble clic en el archivo index.html y se abre en el navegador.
+- No hace falta instalar nada.
+
+Carpetas:
+- index.html     -> toda la estructura de la pagina
+- css/           -> los estilos (styles.css)
+- img/           -> fotos y texturas del efecto VHS
+- video/         -> los videos
+- fonts/         -> las fuentes de letra
+- componentes/   -> notas que explican cada parte de la pagina
+
+Cosas que aun faltan (marcadas como PENDIENTE en la pagina):
+- Ciudad y zona de contratacion (seccion Trayectoria)
+- Nombre y portada del lanzamiento destacado OUT NOW (Discografia)
+- Fechas y eventos del Calendario
+- Correo electronico de contacto (caja de copiado en Contacto)
+- Credito de las 5 fotos nuevas (seccion Photos)
+
+Como publicarla en internet:
+- Sube toda esta carpeta a cualquier hosting estatico
+  (por ejemplo Netlify o GitHub Pages). Solo se sube tal cual,
+  no hay que compilar nada.

@@ -1,0 +1,1211 @@
+/* ================================================================
+   ESTRELLA SEMIVIVA — Press Kit
+   styles.css — solo HTML + CSS, sin JavaScript, sin CDN
+   Orden: 1) @font-face  2) :root  3) Reset  4) Base
+          5) Layout     6) Componentes  7) Efectos  8) Responsive
+   ================================================================ */
+
+/* ================================================================
+   1) @FONT-FACE
+   ================================================================ */
+@font-face {
+  font-family: "Dezzy";
+  src: url("../fonts/Dezzy.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Anomale Demo — fuente tribal para el nombre y títulos (entregada por el usuario)
+   NOTA: versión demo (Artisan Template / 1001fonts); no incluye caracteres
+   acentuados (Á É Í Ó Ú Ñ): esos glifos caen a la siguiente fuente de la pila */
+@font-face {
+  font-family: "Anomale";
+  src: url("../fonts/ANOMALE-DEMO.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Risketchh Trial — fuente para los textos [PENDIENTE] (entregada por el usuario)
+   NOTA: versión trial (ffeeaarr / 1001fonts); licencia comercial no incluida */
+@font-face {
+  font-family: "Risketchh";
+  src: url("../fonts/RisketchhTrial-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Newshound — fuente para textos largos (entregada por el usuario) */
+@font-face {
+  font-family: "Newshound";
+  src: url("../fonts/newshound-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newshound";
+  src: url("../fonts/newshound-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================================================
+   2) VARIABLES — paleta post-punk gótico ruso (boceto + txts)
+   ================================================================ */
+:root {
+  /* Paleta morada entregada por el usuario (color.adobe.com) */
+  --negro: #141416;          /* fondo principal: negro (gris muy oscuro) */
+  --negro-2: #1d1c21;        /* fondo de secciones: gris oscuro */
+  --gris-oscuro: #673D99;    /* morado medio, bordes y detalles (paleta) */
+  --hueso: #ffffff;          /* texto principal: blanco */
+  --gris-claro: #b5b5b5;     /* texto secundario: gris claro */
+  --sombra: #0005;
+  /* Acentos violeta (paleta) */
+  --acento: #7229CC;
+  --acento-brillante: #7300FF;
+  --acento-claro: #A985E8;   /* tinte claro derivado: texto de acento legible (AA) */
+  --acento-oscuro: #673D99;
+  /* Inputs del formulario (azul noche del boceto) */
+  --superficie: #503D66;
+
+  /* Tipografías */
+  --font-display: "Anomale", "Dezzy", "Georgia", serif;
+  --font-serif: "Newshound", "Georgia", "Times New Roman", serif;
+
+  /* Espaciado */
+  --seccion-pad: clamp(3rem, 8vw, 7rem);
+}
+
+/* ================================================================
+   3) RESET BÁSICO
+   ================================================================ */
+html, body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul { list-style: none; }
+
+/* ================================================================
+   4) ESTILOS BASE
+   ================================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--negro);
+  color: var(--hueso);
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.125rem);
+  line-height: 1.65;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--hueso);
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px dashed var(--acento-claro);
+  outline-offset: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Datos faltantes: marcados visible según INDICACIONES.txt,
+   escritos con Risketchh (fuente del usuario) */
+.pendiente {
+  font-family: "Risketchh", var(--font-serif);
+  font-style: normal; /* Risketchh no trae cursiva; se evita la sintética */
+  color: var(--hueso);
+  opacity: 0.9;
+}
+
+/* ================================================================
+   5) LAYOUT
+   ================================================================ */
+.seccion__inner {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+  padding-block: var(--seccion-pad);
+}
+
+.titulo-seccion {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 1.2rem + 3vw, 3.4rem);
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--hueso);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+.centrado { text-align: center; }
+
+/* ================================================================
+   6) COMPONENTES
+   ================================================================ */
+
+/* ---------- Header + navegación ---------- */
+.site-header {
+  background: var(--negro);
+  border-bottom: 1px solid var(--gris-oscuro);
+  padding: clamp(1rem, 3vw, 2rem) 4vw;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-logo {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.2rem + 4vw, 4.2rem);
+  letter-spacing: 0.08em;
+  color: var(--hueso);
+  display: inline-block;
+  margin-bottom: 0.6em;
+  text-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.nav-item {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 0.8rem + 0.6vw, 1.25rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  min-width: 64px;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid transparent;
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition 0.2s ease-in-out */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efecto: EFECTO WEB HTML CSS.txt — hover del menú con glow */
+.nav-item:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+  border-bottom-color: var(--acento);
+}
+
+/* ---------- MÚSICA (Spotify embebido) ---------- */
+.musica {
+  background: var(--negro);
+}
+
+.musica__spotify {
+  max-width: 660px;
+  margin-inline: auto;
+}
+
+.musica__spotify iframe {
+  display: block;
+  width: 100%;
+  height: 352px;
+  border: 0;
+  border-radius: 0; /* esquinas rectas, acordes a la estética del sitio */
+}
+
+/* Enlace de respaldo al perfil (mismo estilo de texto que los menús) */
+.musica__enlace {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.musica__enlace a {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover glow */
+  transition: all 0.4s;
+}
+
+.musica__enlace a:hover {
+  text-shadow: 0 0 8px #ffffff;
+  transition: all 0.2s;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: clamp(4rem, 10vh, 6rem) 4vw;
+  /* Efecto: EFECTO WEB HTML CSS.txt — @keyframes spawn al cargar */
+  animation: spawn 2s ease-in-out forwards;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.hero__card {
+  position: relative;
+  z-index: 5;
+  width: min(460px, 84vw);
+  box-shadow: 0 0 32px var(--sombra), 0 0 90px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--gris-oscuro);
+  /* Efecto: EFECTO WEB HTML CSS.txt — transitions suaves + hover scale */
+  transition: all 0.4s;
+}
+
+.hero__card:hover {
+  scale: 1.03;
+  box-shadow: 16px 16px 40px var(--sombra), 0 0 60px rgba(114, 41, 204, 0.25);
+  transition: all 0.2s;
+}
+
+/* ---------- TRAYECTORIA ---------- */
+.trayectoria {
+  /* Foto de prensa B/N como fondo, velada (boceto) */
+  background-image:
+    linear-gradient(rgba(10, 11, 10, 0.86), rgba(10, 11, 10, 0.92)),
+    url("../img/snapgram.io_download-file-pcoscqr8.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.trayectoria__bloques {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.trayectoria__bloque h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 1rem + 1.2vw, 1.9rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hueso);
+  margin-bottom: 0.4em;
+}
+
+.trayectoria__sub {
+  color: var(--gris-claro);
+  margin-bottom: 0.6em;
+}
+
+.trayectoria__bloque ul li {
+  padding-left: 1.4em;
+  position: relative;
+  margin-bottom: 0.35em;
+  color: var(--hueso);
+}
+
+.trayectoria__bloque ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--hueso);
+}
+
+/* ---------- DISCOGRAFÍA ---------- */
+.discografia {
+  background: var(--negro);
+}
+
+.release {
+  position: relative;
+  text-align: center;
+  margin-bottom: clamp(4rem, 8vw, 6rem);
+  padding-top: 1rem;
+}
+
+/* "OUT NOW" en rojo a los lados (boceto) */
+.release__outnow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1rem + 3vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hueso);
+  text-shadow: 0 0 22px rgba(114, 41, 204, 0.6);
+  transform: rotate(4deg);
+  pointer-events: none;
+}
+
+.release__titulo { margin-bottom: 2rem; }
+
+.release__cover {
+  width: min(340px, 78vw);
+  margin-inline: auto;
+  border: 1px solid var(--acento);
+  box-shadow: 0 0 40px rgba(114, 41, 204, 0.35);
+}
+
+.release__cover img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.release__cover figcaption {
+  padding: 0.9em 1em;
+  background: var(--negro-2);
+  font-size: 0.95rem;
+  color: var(--gris-claro);
+}
+
+.release__cta { margin-top: 1.8rem; }
+
+/* Lista de lanzamientos: títulos en fuente de texto mayúscula
+   (conserva los acentos, que la fuente display no incluye) */
+.discografia__lista {
+  max-width: 640px;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  display: grid;
+  gap: 0.9em;
+}
+
+.discografia__lista li {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.4rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--hueso);
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--gris-oscuro);
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover glow */
+  transition: all 0.4s;
+}
+
+.discografia__lista li:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-bottom-color: var(--acento);
+}
+
+/* Botón rojo estilo "STREAM NOW / VIEW ALL VIDEOS" del boceto */
+.boton-rojo {
+  display: inline-block;
+  background: var(--acento);
+  color: var(--hueso);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85em 2.2em;
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover scale */
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.boton-rojo:hover {
+  scale: 1.1;
+  background: var(--acento-brillante);
+  box-shadow: 0 0 24px rgba(114, 41, 204, 0.55);
+  transition: all 0.2s;
+}
+
+/* Grid de videos */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.videos-grid__item video {
+  width: 100%;
+  border: 1px solid var(--gris-oscuro);
+}
+
+/* ---------- Marco rojo (boceto: marcos con esquinas rojas) ---------- */
+.marco-rojo {
+  position: relative;
+  padding: clamp(0.6rem, 1.5vw, 1rem);
+  border: 1px solid var(--acento);
+  box-shadow: 0 0 30px rgba(114, 41, 204, 0.2);
+}
+
+.marco-rojo::before,
+.marco-rojo::after {
+  content: "✦";
+  position: absolute;
+  color: var(--hueso);
+  font-size: 0.9rem;
+}
+
+.marco-rojo::before { top: -0.55em; left: -0.35em; }
+.marco-rojo::after { bottom: -0.55em; right: -0.35em; }
+
+/* ---------- BIOGRAFÍA ---------- */
+.biografia {
+  background: var(--negro-2);
+}
+
+.biografia__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.biografia__texto p {
+  max-width: 65ch;
+  margin-bottom: 1.2em;
+}
+
+/* Línea de géneros y nombre del proyecto dentro de la biografía */
+.biografia__generos {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hueso);
+}
+
+.biografia__nombre {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+  letter-spacing: 0.06em;
+  color: var(--hueso);
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- FOTOS ---------- */
+.fotos {
+  background: var(--negro-2);
+}
+
+.fotos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.fotos__item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--gris-oscuro);
+  filter: grayscale(35%) contrast(1.05);
+  transition: all 0.4s;
+}
+
+/* Fotos verticales: anclar el recorte arriba para no cortar el rostro */
+.fotos__img--top { object-position: top; }
+
+.fotos__item:hover img {
+  filter: grayscale(0%) contrast(1.1);
+  scale: 1.02;
+  transition: all 0.2s;
+}
+
+.fotos__item figcaption {
+  padding-top: 0.6em;
+  font-size: 0.85rem;
+  color: var(--gris-claro);
+  text-align: center;
+}
+
+/* ---------- RIDER ---------- */
+.rider {
+  background: var(--negro-2);
+}
+
+.rider__lista {
+  max-width: 640px;
+  margin-inline: auto;
+  display: grid;
+  gap: 0.9em;
+}
+
+.rider__lista li {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 0.95rem + 0.8vw, 1.6rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5em 0 0.5em 1.6em;
+  border-bottom: 1px solid var(--gris-oscuro);
+  position: relative;
+}
+
+.rider__lista li::before {
+  content: "†";
+  position: absolute;
+  left: 0.4em;
+  color: var(--hueso);
+}
+
+/* Subtítulos de bloque dentro del rider (equipo propio / recinto / opcional) */
+.rider__subtitulo {
+  max-width: 640px;
+  margin: 2.4rem auto 1rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hueso);
+}
+
+.rider__subtitulo:first-of-type { margin-top: 0; }
+
+/* Variante en fuente de texto: las listas del recinto son frases largas
+   y la fuente display tribal las haría ilegibles */
+.rider__lista--texto li {
+  font-family: var(--font-serif);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+  color: var(--gris-claro);
+}
+
+/* Nota de renta del equipo obligatorio */
+.rider__nota {
+  max-width: 640px;
+  margin: 1.2rem auto 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--gris-claro);
+}
+
+/* ---------- CONTRATARME ---------- */
+.contratarme {
+  background: var(--negro);
+}
+
+.contratarme__bloques {
+  max-width: 640px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contratarme__bloque {
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--superficie);
+  background: var(--negro-2);
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover glow */
+  transition: all 0.4s;
+}
+
+.contratarme__bloque:hover {
+  border-color: var(--acento);
+  box-shadow: 0 0 28px -6px var(--acento-oscuro);
+}
+
+.contratarme__bloque h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hueso);
+  margin-bottom: 0.6em;
+}
+
+.contratarme__bloque p {
+  color: var(--gris-claro);
+  font-size: 1.02rem;
+}
+
+.contratarme__bloque p + p { margin-top: 0.6em; }
+
+/* Título largo de Trayectoria en fuente de texto para legibilidad */
+.trayectoria .titulo-seccion {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
+/* ---------- CALENDARIO (template aportado por el usuario;
+     SCSS traducido a CSS plano con la paleta del sitio) ---------- */
+.calendario {
+  background: var(--negro-2);
+}
+
+.calendario__lista {
+  max-width: 640px;
+  margin-inline: auto;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.event_item {
+  padding: 1.1rem 1.4rem;
+  border: 1px solid var(--superficie);
+  background: var(--negro);
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover */
+  transition: all 0.4s;
+}
+
+.event_item:hover {
+  background-image: linear-gradient(-222deg, var(--acento-brillante), var(--acento));
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+
+.event_item:hover .ei_Copy,
+.event_item:hover .ei_Title,
+.event_item:hover .pendiente { color: #ffffff; }
+
+.ei_Title {
+  display: inline-block;
+  margin-left: 0;
+  color: var(--hueso);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ei_Copy {
+  font-size: 0.95rem;
+  margin-left: 0;
+  color: var(--gris-claro);
+}
+
+/* ---------- PAQUETES DE CONTRATACIÓN ---------- */
+.paquetes {
+  background: var(--negro-2);
+}
+
+/* Subtítulo de la sección en fuente de texto (mismo patrón que .rider__subtitulo) */
+.paquetes__sub {
+  margin: -1.2rem auto 2.4rem;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 0.9rem + 0.4vw, 1.2rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+}
+
+.paquetes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 1.2rem;
+}
+
+/* Tarjetas sin marco ni fondo (se retiró el diseño minimalista de caja);
+   se conserva la iluminación glow en hover */
+.paquete {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.8rem;
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover glow */
+  transition: all 0.4s;
+}
+
+.paquete:hover {
+  box-shadow: 0 0 32px -4px var(--acento-oscuro);
+  transform: translateY(-4px);
+}
+
+/* Paquete premium: iluminación violeta permanente (sin degradado) */
+.paquete--destacado {
+  box-shadow: 0 0 40px -6px var(--acento);
+}
+
+.paquete__nombre {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 1.1rem + 1vw, 1.8rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hueso);
+  margin-bottom: 0.35em;
+}
+
+.paquete__opcion {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--gris-claro);
+  margin-bottom: 0.8em;
+}
+
+/* Precio en fuente display; el signo $ cae a Dezzy porque Anomale no lo incluye */
+.paquete__precio {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+  letter-spacing: 0.06em;
+  color: var(--hueso);
+  margin-bottom: 0.7em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--gris-oscuro);
+}
+
+.paquete__precio span {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.42em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+}
+
+.paquete__lista {
+  display: grid;
+  gap: 0.55em;
+}
+
+.paquete__lista li {
+  position: relative;
+  padding-left: 1.5em;
+  font-size: 1rem;
+  color: var(--gris-claro);
+}
+
+.paquete__lista li::before {
+  content: "†";
+  position: absolute;
+  left: 0.3em;
+  color: var(--hueso);
+}
+
+/* Nota global de duración bajo el grid */
+.paquetes__nota {
+  max-width: 640px;
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--gris-claro);
+}
+
+/* ---------- CONTACTO ---------- */
+.contacto {
+  background: var(--negro);
+}
+
+.contacto__form {
+  max-width: 640px;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--superficie);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contacto__form label {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--hueso);
+}
+
+.contacto__form input,
+.contacto__form textarea {
+  background: var(--superficie);
+  border: 1px solid transparent;
+  color: var(--hueso);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  width: 100%;
+  resize: vertical;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.contacto__form input:hover,
+.contacto__form textarea:hover { border-color: var(--gris-oscuro); }
+
+.contacto__form input:focus,
+.contacto__form textarea:focus {
+  outline: none;
+  border-color: var(--hueso);
+}
+
+/* Send como texto subrayado blanco (etiqueta del interruptor de la caja) */
+.texto-send {
+  justify-self: center;
+  margin-top: 1.2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover glow */
+  transition: all 0.4s;
+}
+
+.texto-send:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+  transition: all 0.2s;
+}
+
+/* ---- Caja de copiado (patrón checkbox, sin JavaScript) ---- */
+.caja-enviar__toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.caja-enviar {
+  display: none;
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--superficie);
+  background: var(--negro-2);
+  text-align: center;
+  /* Misma iluminación glow violeta que las tarjetas */
+  box-shadow: 0 0 32px -6px var(--acento-oscuro);
+}
+
+.caja-enviar__toggle:checked ~ .caja-enviar { display: block; }
+
+.caja-enviar__titulo {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 1.1rem + 1vw, 1.8rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hueso);
+  margin-bottom: 0.6em;
+}
+
+.caja-enviar p { color: var(--gris-claro); }
+
+.caja-enviar__canales {
+  margin: 1.2rem 0 1.6rem;
+  display: grid;
+  gap: 0.6em;
+  color: var(--gris-claro);
+}
+
+.caja-enviar__canales a {
+  color: var(--hueso);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  /* Efecto: EFECTO WEB HTML CSS.txt — transition + hover glow */
+  transition: all 0.4s;
+}
+
+.caja-enviar__canales a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+}
+
+/* Cerrar con el mismo estilo de texto subrayado que Send */
+.caja-enviar__cerrar {
+  display: inline-block;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: all 0.4s;
+}
+
+.caja-enviar__cerrar:hover { text-shadow: 0 0 8px #ffffff; }
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--negro);
+  border-top: 1px solid var(--gris-oscuro);
+  padding: var(--seccion-pad) 4vw 3rem;
+}
+
+.site-footer__social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem 1.5rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.site-footer__social li {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 0.85rem + 0.7vw, 1.5rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hueso);
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--hueso);
+  text-align: left;
+}
+
+/* Enlaces de redes: heredan la tipografía del ítem; glow blanco en hover
+   (mismo efecto que .texto-send) */
+.site-footer__social a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.site-footer__social a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+  transition: all 0.2s;
+}
+
+.site-footer__legal {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.15em;
+  color: var(--gris-claro);
+  font-size: 0.95rem;
+}
+
+/* Firma del desarrollador: texto pequeño con icono SVG de GitHub;
+   el enlace hereda el color y usa el mismo glow blanco en hover */
+.site-footer__firma {
+  margin-top: 1.6rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gris-claro);
+}
+
+.site-footer__firma a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  color: inherit;
+  transition: all 0.4s;
+}
+
+.site-footer__firma a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+  transition: all 0.2s;
+}
+
+.site-footer__firma svg { flex: none; } /* el icono no se deforma */
+
+/* ================================================================
+   7) EFECTOS Y ANIMACIONES
+   ================================================================ */
+
+/* ---- Efecto: snippet Scotch/VHS aportado por el usuario — overlay global ----
+   Capa fija sobre toda la página (pointer-events: none para no bloquear
+   clics). ::before = ruido estático en blend overlay; ::after = glitch
+   animado en blend screen. Las texturas son recreaciones locales de las
+   originales (URLs externas) para mantener el sitio offline */
+.vhs-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+
+.vhs-overlay::before,
+.vhs-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.vhs-overlay::before {
+  background-image: url("../img/vhs-noise.png");
+  mix-blend-mode: overlay;
+  /* Opacidad bajada de 0.4 a 0.16: se quita el velo blanquecino
+     pero el grano de película vieja sigue visible */
+  opacity: 0.16;
+}
+
+.vhs-overlay::after {
+  background-image: url("../img/vhs-glitch.gif");
+  background-size: cover;
+  mix-blend-mode: screen;
+  /* Opacidad bajada de 0.18 a 0.05: el blend screen es el que más
+     aclaraba la página; así las bandas de glitch apenas se insinúan
+     y ya no se ve la luz blanca encima del contenido */
+  opacity: 0.05;
+}
+
+/* ---- Efecto: EFECTO WEB HTML CSS.txt — aparición al cargar ---- */
+@keyframes spawn {
+  0% {
+    box-shadow: 0 0 0 var(--sombra);
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 32px var(--sombra);
+    opacity: 1;
+  }
+}
+
+/* ---- Efecto: EFECTO YOUTUBE CSS VHS HTML.txt — VHS scanlines ----
+   .video = contenedor con blur leve; ::after = líneas de escaneo
+   animadas; .vhs-rgb = barras RGB parpadeantes */
+.video {
+  position: relative;
+  overflow: hidden;
+  filter: blur(0.4px);
+}
+
+.video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 5px, 3px 100%;
+  pointer-events: none;
+  animation:
+    animation-vhs 20s ease-in-out infinite,
+    animation-opacity-scanlines 0.2s ease-in-out alternate infinite;
+  z-index: 2;
+}
+
+.vhs-rgb {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 3;
+  animation: animation-opacity 0.2s ease-out infinite;
+}
+
+.vhs-rgb--red {
+  top: 2%;
+  background-image: linear-gradient(to right, red 0%, #ff4d4d 100%);
+  animation-delay: 0.2s;
+}
+
+.vhs-rgb--green {
+  top: 4%;
+  background-image: linear-gradient(to right, green 0%, #4dff4d 100%);
+  animation-delay: 0.4s;
+}
+
+.vhs-rgb--blue {
+  top: 6%;
+  background-image: linear-gradient(to right, blue 0%, #4d4dff 100%);
+  animation-delay: 0.6s;
+}
+
+@keyframes animation-vhs {
+  0%   { transform: translateY(0%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes animation-opacity-scanlines {
+  to { opacity: 0.6; }
+}
+
+@keyframes animation-opacity {
+  to {
+    opacity: 0.2;
+    background-position: 300%;
+  }
+}
+
+/* ---- Accesibilidad: reducir movimiento si el sistema lo pide ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero__video video { opacity: 0; } /* deja visible el póster estático */
+  .video { filter: none; }
+  .vhs-overlay::after { display: none; } /* detiene el glitch animado global */
+}
+
+/* ================================================================
+   8) RESPONSIVE (mobile first ya aplicado; ajustes por ancho)
+   ================================================================ */
+
+/* En pantallas menores a 768px el "OUT NOW" absoluto se empalma con el
+   título del lanzamiento; se vuelve estático y centrado sobre la portada */
+@media (max-width: 767px) {
+  .release__outnow { position: static; transform: none; margin-bottom: 1rem; }
+}
+
+@media (min-width: 768px) {
+  .biografia__grid { grid-template-columns: 1fr 1.1fr; }
+  .site-footer__social { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .hero__card { width: min(500px, 40vw); }
+}
+
+/* Celulares muy angostos (280–360px, p. ej. plegables cerrados):
+   las redes pasan a una sola columna para que "Hyperfollow"
+   no se salga de la pantalla */
+@media (max-width: 360px) {
+  .site-footer__social { grid-template-columns: 1fr; }
+}

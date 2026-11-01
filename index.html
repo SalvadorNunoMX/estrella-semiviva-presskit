@@ -1,1 +1,515 @@
-placeholder
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ESTRELLA SEMIVIVA — Press kit oficial. Dark wave, cold wave, post punk, witch house.">
+  <title>ESTRELLA SEMIVIVA — Press Kit</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Capa global de efecto VHS (snippet Scotch/VHS aportado por el usuario):
+       ruido estático + glitch animado por encima de toda la página,
+       sin interceptar clics. Texturas generadas localmente (vhs-noise.png,
+       vhs-glitch.gif) porque las originales son URLs externas y el sitio
+       debe funcionar offline -->
+  <div class="vhs-overlay" aria-hidden="true"></div>
+
+  <!-- ============ HEADER + NAVEGACIÓN (boceto: logo gótico + menú superior) ============ -->
+  <header class="site-header">
+    <a class="site-logo" href="#inicio">ESTRELLA&nbsp;SEMIVIVA</a>
+    <nav class="navigation" aria-label="Navegación principal">
+      <a href="#musica" class="nav-item">Musica</a>
+      <a href="#sobre-mi" class="nav-item">Sobre mí</a>
+      <a href="#trayectoria" class="nav-item">Trayectoria</a>
+      <a href="#calendario" class="nav-item">Calendario</a>
+      <a href="#discografia" class="nav-item">Discografía</a>
+      <a href="#rider" class="nav-item">Rider tecnico</a>
+      <a href="#contratarme" class="nav-item">Contratarme</a>
+      <a href="#paquetes" class="nav-item">Paquetes</a>
+      <a href="#contacto" class="nav-item">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============ MÚSICA (perfil de Spotify embebido, encima de la primera imagen) ============ -->
+    <!-- NOTA: el reproductor oficial de Spotify es un servicio externo y requiere
+         conexión a internet; es la única parte de la página que no funciona offline -->
+    <section id="musica" class="musica">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Musica</h2>
+        <div class="musica__spotify">
+          <iframe src="https://open.spotify.com/embed/artist/07mw2SluPIfJem2maOSOrs?utm_source=generator&theme=0"
+                  width="100%" height="352" frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="Perfil de ESTRELLA SEMIVIVA en Spotify: últimos lanzamientos"></iframe>
+        </div>
+        <p class="musica__enlace">
+          <a href="https://open.spotify.com/artist/07mw2SluPIfJem2maOSOrs" target="_blank" rel="noopener">Abrir perfil en Spotify</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HERO (boceto: video de fondo + tarjeta Wrapped + géneros) ============ -->
+    <section class="hero" aria-label="Portada">
+      <!-- Video de fondo con efecto VHS (EFECTO YOUTUBE CSS VHS HTML.txt) -->
+      <div class="hero__video video">
+        <video src="video/snapgram.io_download-file-0y50d4o6.mp4"
+               poster="img/poster-video-2.jpg"
+               width="1276" height="720"
+               autoplay muted loop playsinline
+               aria-label="Video de presentación en vivo de Estrella Semiviva"></video>
+        <span class="vhs-rgb vhs-rgb--red" aria-hidden="true"></span>
+        <span class="vhs-rgb vhs-rgb--green" aria-hidden="true"></span>
+        <span class="vhs-rgb vhs-rgb--blue" aria-hidden="true"></span>
+      </div>
+
+      <!-- Tarjeta central: Spotify for Artists Wrapped -->
+      <figure class="hero__card">
+        <img src="img/snapgram.io_download-file-wiq6bgj9.jpg"
+             alt="Tarjeta de Spotify for Artists Wrapped de Estrella Semiviva: 2.8 mil oyentes, 643 horas, 16.6 mil reproducciones en 79 países"
+             width="1440" height="1440">
+        <figcaption class="visually-hidden">Estadísticas de Spotify Wrapped del proyecto</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ TRAYECTORIA / PRESENTACIONES EN VIVO (boceto: texto sobre foto B/N) ============ -->
+    <section id="trayectoria" class="trayectoria">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Presentaciones en vivo, contrataciones y colaboraciones</h2>
+
+        <div class="trayectoria__bloques">
+          <article class="trayectoria__bloque">
+            <h3>Estrella Semiviva — Fullband</h3>
+            <p class="trayectoria__sub">Show de 30–40 minutos</p>
+            <ul>
+              <li>Catherin Cappello [Cantante]</li>
+              <li>Victor Martinez [Bajista]</li>
+              <li>Equipo propio: sintetizadores, bajos y pedales.</li>
+            </ul>
+          </article>
+
+          <article class="trayectoria__bloque">
+            <h3>Estrella Semiviva — DJ</h3>
+            <ul>
+              <li>Sets de 40 minutos a 1 hora.</li>
+              <li>Sets personalizados y ambientación musical.</li>
+              <li>Equipo propio de mezcla.</li>
+            </ul>
+          </article>
+
+          <!-- Foros donde se ha presentado el proyecto -->
+          <article class="trayectoria__bloque">
+            <h3>Trayectoria en vivo</h3>
+            <ul>
+              <li>Foro Landó</li>
+              <li>Foro 304</li>
+              <li>Ágora de Cénide</li>
+              <li>La Diabla</li>
+              <li>Café Bombón</li>
+              <li>Bar Lounge</li>
+            </ul>
+          </article>
+
+          <article class="trayectoria__bloque">
+            <h3>Han compartido escenario con</h3>
+            <p>Planeta No · Malcriada · El Último Vecino · O Tortuga · Liozn · Ultrasonicas</p>
+          </article>
+
+          <article class="trayectoria__bloque">
+            <h3>Zona de contratacion</h3>
+            <p><span class="pendiente">PENDIENTE ciudad y zona</span> — presentaciones fuera de la zona disponibles con viáticos cubiertos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALENDARIO (template de eventos aportado por el usuario,
+         adaptado a la paleta del sitio) ============ -->
+    <section id="calendario" class="calendario">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Calendario</h2>
+        <div class="calendario__lista">
+          <div class="event_item">
+            <div class="ei_Title"><span class="pendiente">PENDIENTE fecha</span></div>
+            <div class="ei_Copy"><span class="pendiente">PENDIENTE evento ciudad y venue</span></div>
+          </div>
+          <div class="event_item">
+            <div class="ei_Title"><span class="pendiente">PENDIENTE fecha</span></div>
+            <div class="ei_Copy"><span class="pendiente">PENDIENTE evento ciudad y venue</span></div>
+          </div>
+          <div class="event_item">
+            <div class="ei_Title"><span class="pendiente">PENDIENTE fecha</span></div>
+            <div class="ei_Copy"><span class="pendiente">PENDIENTE evento ciudad y venue</span></div>
+          </div>
+          <div class="event_item">
+            <div class="ei_Title"><span class="pendiente">PENDIENTE fecha</span></div>
+            <div class="ei_Copy"><span class="pendiente">PENDIENTE evento ciudad y venue</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DISCOGRAFÍA (boceto: ALL MUSIC VIDEOS + OUT NOW + STREAM) ============ -->
+    <section id="discografia" class="discografia">
+      <div class="seccion__inner">
+
+        <!-- REVISAR: el boceto muestra el bloque "OUT NOW" con la portada y datos de otro artista
+             (referencia voidxwitch). Se reproduce el layout; faltan la portada, el título y el
+             enlace reales del lanzamiento de Estrella Semiviva. -->
+        <div class="release">
+          <p class="release__outnow" aria-hidden="true">Out<br>Now</p>
+          <h2 class="titulo-seccion release__titulo"><span class="pendiente">PENDIENTE nombre del lanzamiento</span></h2>
+          <figure class="release__cover">
+            <!-- REVISAR: se usa la foto de prensa como portada provisional hasta recibir la portada real -->
+            <img src="img/snapgram.io_download-file-8snpl2gt.jpg"
+                 alt="Retrato de Estrella Semiviva frente a una persiana con caligrafía"
+                 width="1042" height="1303" loading="lazy">
+            <figcaption>“<span class="pendiente">PENDIENTE titulo</span>” — disponible en todas las plataformas</figcaption>
+          </figure>
+          <p class="release__cta">
+            <a class="boton-rojo" href="https://youtube.com/@losgatosnohancomido"
+               target="_blank" rel="noopener">Stream now</a>
+          </p>
+        </div>
+
+        <!-- Lista de lanzamientos del proyecto -->
+        <h2 class="titulo-seccion">Discografia y lanzamientos</h2>
+        <ul class="discografia__lista">
+          <li>Óleo</li>
+          <li>Polifonía</li>
+          <li>Crystal Caves OST</li>
+          <li>Gótico slow</li>
+          <li>Redcrooss</li>
+          <li>Purple Curse</li>
+        </ul>
+
+        <h2 class="titulo-seccion">Videos</h2>
+        <div class="videos-grid">
+          <!-- Efecto VHS sobre videos (EFECTO YOUTUBE CSS VHS HTML.txt) -->
+          <div class="video videos-grid__item">
+            <video src="video/snapgram.io_download-file-3l4o1lru.mp4"
+                   poster="img/poster-video-1.jpg"
+                   width="480" height="640"
+                   controls loop muted playsinline preload="none"></video>
+            <span class="vhs-rgb vhs-rgb--red" aria-hidden="true"></span>
+            <span class="vhs-rgb vhs-rgb--green" aria-hidden="true"></span>
+            <span class="vhs-rgb vhs-rgb--blue" aria-hidden="true"></span>
+          </div>
+          <div class="video videos-grid__item">
+            <video src="video/snapgram.io_download-file-0y50d4o6.mp4"
+                   poster="img/poster-video-2.jpg"
+                   width="1276" height="720"
+                   controls loop muted playsinline preload="none"></video>
+            <span class="vhs-rgb vhs-rgb--red" aria-hidden="true"></span>
+            <span class="vhs-rgb vhs-rgb--green" aria-hidden="true"></span>
+            <span class="vhs-rgb vhs-rgb--blue" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="centrado">
+          <a class="boton-rojo" href="https://youtube.com/@losgatosnohancomido"
+             target="_blank" rel="noopener">View all videos</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ / BIOGRAPHY (boceto: foto enmarcada + texto) ============ -->
+    <section id="sobre-mi" class="biografia">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Biography</h2>
+        <div class="biografia__grid">
+          <figure class="biografia__foto marco-rojo">
+            <img src="img/snapgram.io_download-file-4llb3o8w.jpg"
+                 alt="Estrella Semiviva sentada entre lápidas en un panteón"
+                 width="1440" height="959" loading="lazy">
+          </figure>
+          <div class="biografia__texto">
+            <p class="biografia__generos">Especializada en Darkwave · Witchouse · Coldwave · Post-Punk</p>
+            <p class="biografia__nombre">ESTRELLA SEMIVIVA</p>
+            <p>Es un proyecto musical mexicano, con sonidos fríos y electrónicos.
+               Toma influencia de géneros como el coldwave, post-punk, witchouse, electroclash y emo.
+               Mezcla sintetizadores, bajos, guitarras y distorsiones vocales.</p>
+            <p>Crea atmosferas oscuras y melancólicas, transmite espacios como la tristeza
+               el romanticismo y la espiritualidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PHOTOS (boceto: grid de fotos con crédito) ============ -->
+    <section class="fotos">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Photos</h2>
+        <div class="fotos__grid">
+          <figure class="fotos__item">
+            <img src="img/snapgram.io_download-file-8snpl2gt.jpg"
+                 alt="Estrella Semiviva con suéter a rayas frente a persiana con caligrafía"
+                 width="1042" height="1303" loading="lazy">
+            <figcaption>photo credit: xstrella</figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/snapgram.io_download-file-ao9xmfy9.jpg"
+                 alt="Estrella Semiviva cantando en vivo junto a una batería, con fuego en primer plano"
+                 width="832" height="554" loading="lazy">
+            <figcaption>photo credit: xstrella</figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/snapgram.io_download-file-pcoscqr8.jpg"
+                 alt="Presentación en vivo en blanco y negro, entre árboles"
+                 width="1440" height="1920" loading="lazy">
+            <figcaption>photo credit: xstrella</figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/snapgram.io_download-file-4llb3o8w.jpg"
+                 alt="Estrella Semiviva en un panteón entre cruces de piedra"
+                 width="1440" height="959" loading="lazy">
+            <figcaption>photo credit: xstrella</figcaption>
+          </figure>
+          <!-- Fotos nuevas aportadas por la artista -->
+          <figure class="fotos__item">
+            <img class="fotos__img--top" src="img/foto-vivo-azul.jpg"
+                 alt="Estrella Semiviva cantando en vivo con micrófono, bajo luces azules y verdes"
+                 width="658" height="1186" loading="lazy">
+            <figcaption>photo credit: <span class="pendiente">PENDIENTE credito</span></figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/foto-retrato-rojo.jpg"
+                 alt="Retrato de Estrella Semiviva con lentes oscuros bajo luz roja, mostrando anillo y tatuajes en la mano"
+                 width="1080" height="1211" loading="lazy">
+            <figcaption>photo credit: <span class="pendiente">PENDIENTE credito</span></figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/foto-vivo-bn.jpg"
+                 alt="Estrella Semiviva cantando en vivo en blanco y negro, con lentes oscuros"
+                 width="1080" height="964" loading="lazy">
+            <figcaption>photo credit: <span class="pendiente">PENDIENTE credito</span></figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/foto-guitarra.jpg"
+                 alt="Estrella Semiviva sentada en una cama con una guitarra eléctrica azul y playera de Joy Division"
+                 width="1080" height="794" loading="lazy">
+            <figcaption>photo credit: <span class="pendiente">PENDIENTE credito</span></figcaption>
+          </figure>
+          <figure class="fotos__item">
+            <img src="img/foto-noche-corona.jpg"
+                 alt="Retrato nocturno de larga exposición de Estrella Semiviva con corona y velo rojo"
+                 width="1080" height="1035" loading="lazy">
+            <figcaption>photo credit: <span class="pendiente">PENDIENTE credito</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RIDER TÉCNICO (equipo propio + requerimientos del recinto) ============ -->
+    <section id="rider" class="rider">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Rider tecnico</h2>
+
+        <!-- Equipo propio del proyecto (del boceto) -->
+        <h3 class="rider__subtitulo">Equipo propio del proyecto</h3>
+        <ul class="rider__lista">
+          <li>Sintetizadores</li>
+          <li>Bajos</li>
+          <li>Pedales</li>
+          <li>Equipo propio de mezcla</li>
+        </ul>
+
+        <!-- Condiciones de contratación aportadas por la artista -->
+        <h3 class="rider__subtitulo">Equipo obligatorio proporcionado por el recinto</h3>
+        <ul class="rider__lista rider__lista--texto">
+          <li>Un micrófono para voz.</li>
+          <li>Una mesa estable para colocar el equipo electrónico.</li>
+          <li>Bocinas y sistema de sonido funcional para reproducir secuencias y voz.</li>
+          <li>Un multicontacto o extensión eléctrica con al menos dos entradas disponibles.</li>
+        </ul>
+        <p class="rider__nota">Si el recinto no cuenta con alguno de los elementos obligatorios,
+           se podrá gestionar su renta por un costo adicional, previa cotización
+           y autorización de ambas partes.</p>
+
+        <h3 class="rider__subtitulo">Equipo opcional</h3>
+        <ul class="rider__lista rider__lista--texto">
+          <li>Amplificador para bajo.</li>
+          <li>Dos cables de plug a plug, de 5 a 10 metros.</li>
+          <li>Un cable auxiliar (avisar si no se cuenta con él).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTRATARME (condiciones, seguridad y compromisos) ============ -->
+    <section id="contratarme" class="contratarme">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Contratarme</h2>
+        <div class="contratarme__bloques">
+
+          <article class="contratarme__bloque">
+            <h3>Condiciones de contratacion</h3>
+            <p>El organizador deberá proporcionar información sobre el espacio de presentación,
+               las condiciones de seguridad y el sistema de sonido disponible.
+               También deberá confirmar los horarios de acceso, montaje y prueba de sonido.</p>
+            <p>Se proporcionará un anticipo del 60% para el transporte de la artista
+               antes del evento.</p>
+          </article>
+
+          <article class="contratarme__bloque">
+            <h3>Seguridad y cancelacion</h3>
+            <p>El espacio deberá ser seguro y adecuado para la presentación.</p>
+            <p>Si no se cumplen los requisitos técnicos indispensables, las condiciones de
+               seguridad o no se proporciona la información solicitada, la artista podrá
+               cancelar la presentación si el problema no se resuelve mediante una alternativa.</p>
+          </article>
+
+          <article class="contratarme__bloque">
+            <h3>Compromisos de lx artista</h3>
+            <p>Estrella Semiviva se compromete a respetar los horarios acordados, llevar y
+               cuidar su equipo, cumplir con el tiempo de presentación establecido y respetar
+               las normas de seguridad del recinto.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAQUETES DE CONTRATACIÓN (precios y promoción) ============ -->
+    <section id="paquetes" class="paquetes">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Paquetes de contratacion</h2>
+        <p class="paquetes__sub">Performance · Pagos · Promoción</p>
+
+        <div class="paquetes__grid">
+
+          <article class="paquete">
+            <h3 class="paquete__nombre">Presentacion basica</h3>
+            <p class="paquete__opcion">Opción A — Presentación musical en vivo</p>
+            <p class="paquete__precio">$500 <span>MXN</span></p>
+            <ul class="paquete__lista">
+              <li>1 reel promocional del evento.</li>
+              <li>3 publicaciones en historias del flyer.</li>
+              <li>Difusión en las redes del proyecto.</li>
+              <li>1 ronda de ajustes.</li>
+            </ul>
+          </article>
+
+          <article class="paquete">
+            <h3 class="paquete__nombre">Presentacion gratis</h3>
+            <p class="paquete__precio">$0 <span>MXN</span></p>
+            <ul class="paquete__lista">
+              <li>Evento de entrada gratuita.</li>
+              <li>Exclusiva si no ganan ambas partes.</li>
+              <li>Disponible para eventos que no cobren entrada al público o a petición
+                  de ESTRELLA (los promocionales se acuerdan por separado).</li>
+            </ul>
+          </article>
+
+          <article class="paquete">
+            <h3 class="paquete__nombre">DJ Set</h3>
+            <p class="paquete__opcion">Opción B</p>
+            <p class="paquete__precio">$600 <span>MXN · 1 hora</span></p>
+            <ul class="paquete__lista">
+              <li>Selección y mezcla de música para ambientar el evento.</li>
+              <li>$500 MXN por 40 minutos.</li>
+              <li>Promoción igual a la presentación básica.</li>
+            </ul>
+          </article>
+
+          <article class="paquete">
+            <h3 class="paquete__nombre">Live Campaign</h3>
+            <p class="paquete__precio">$700 <span>MXN</span></p>
+            <ul class="paquete__lista">
+              <li>1 reel.</li>
+              <li>1 reel adicional con un concepto creativo.</li>
+              <li>5 historias promocionales del flyer.</li>
+              <li>Difusión en las redes del proyecto.</li>
+              <li>Colaboración a petición.</li>
+            </ul>
+          </article>
+
+          <article class="paquete paquete--destacado">
+            <h3 class="paquete__nombre">Ritual Performance</h3>
+            <p class="paquete__precio">$1500 <span>MXN</span></p>
+            <ul class="paquete__lista">
+              <li>40 minutos (o más).</li>
+              <li>Vestuario escénico especial.</li>
+              <li>Maquillaje y caracterización.</li>
+              <li>Acciones performáticas preparadas e integradas al set.</li>
+              <li>Concepto visual y escénico coherente con Estrella Semiviva.</li>
+              <li>Promoción del evento con materiales acordados previamente.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <!-- Nota global de duración aportada por la artista -->
+        <p class="paquetes__nota">Todas las presentaciones duran entre 30 y 40 minutos,
+           a excepción del DJ set y el Ritual Performance.</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO (formulario + caja de copiado sin JavaScript) ============ -->
+    <section id="contacto" class="contacto">
+      <div class="seccion__inner">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <!-- Interruptor oculto de la caja de copiado (patrón checkbox, CSS puro).
+             Sin JavaScript la página no puede leer los valores de los campos;
+             la caja guía a la persona para copiar su correo y su mensaje desde
+             los campos ya llenos y enviarlos por los canales del proyecto. -->
+        <input type="checkbox" id="caja-enviar" class="caja-enviar__toggle" aria-hidden="true">
+        <form class="contacto__form">
+          <label for="nombre">Name</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+
+          <label for="mensaje">Message</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+          <!-- Send es la etiqueta del interruptor: al pulsarla se abre la caja -->
+          <label for="caja-enviar" class="texto-send">Send</label>
+        </form>
+
+        <!-- Caja de copiado con el mismo lenguaje visual del formulario -->
+        <div class="caja-enviar">
+          <h3 class="caja-enviar__titulo">Mensaje listo</h3>
+          <p>Copia tu correo y tu mensaje tal como los escribiste en los campos
+             y envíanoslos por el canal que prefieras:</p>
+          <ul class="caja-enviar__canales">
+            <li>Instagram DM · <a href="https://www.instagram.com/xstrellxa"
+               target="_blank" rel="noopener">@xstrellxa</a></li>
+            <li>Correo · <span class="pendiente">PENDIENTE correo</span></li>
+          </ul>
+          <label for="caja-enviar" class="caja-enviar__cerrar">Cerrar</label>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (enlaces directos a las redes del proyecto) ============ -->
+  <footer class="site-footer">
+    <ul class="site-footer__social">
+      <li><a href="https://open.spotify.com/artist/07mw2SluPIfJem2maOSOrs"
+             target="_blank" rel="noopener">Spotify</a></li>
+      <li><a href="https://youtube.com/@estrellasemiviva"
+             target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.instagram.com/xstrellxa"
+             target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://hyperfollow.com/estrellasemiviva"
+             target="_blank" rel="noopener">Hyperfollow</a></li>
+    </ul>
+    <p class="site-footer__legal">ESTRELLA SEMIVIVA — Press Kit</p>
+
+    <!-- Firma del desarrollador: texto + icono SVG de GitHub enlazado al perfil -->
+    <p class="site-footer__firma">
+      <a href="https://github.com/SalvadorNunoMX" target="_blank" rel="noopener">
+        Creado por SanuCode
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>

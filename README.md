@@ -1,1 +1,1 @@
-https://strellasemiviva.elohimsalvadormx.workers.dev/
+https://estrella.elohimsalvadormx.workers.dev/
